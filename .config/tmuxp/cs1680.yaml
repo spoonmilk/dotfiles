@@ -1,0 +1,22 @@
+start_directory: "~/cs1680/1680-dev/"
+session_name: 1680-dev
+windows:
+  - window_name: dev
+    layout: tiled 
+    panes:
+      - shell_command:
+        - cd ~/cs1680/1680-dev/home/
+        - clear
+  - window_name: build-test
+    layout: main-vertical 
+    panes:
+      - shell_command:
+        - ~/cs1680/1680-dev/run-container
+        - clear
+      - shell_command:
+        - ~/cs1680/1680-dev/run-container
+        - clear
+        - wireshark
+      - shell_command:
+        - cd ~/cs1680/1680-dev/home/
+        - clear
