@@ -1,0 +1,9 @@
+.config/gh/
+.config/gh/*
+.config/neofetch
+.config/nextjs-nodejs
+.config/pulse
+.config/wslu
+.config/astro
+.config/create-next-app-nodejs
+.config/fish
