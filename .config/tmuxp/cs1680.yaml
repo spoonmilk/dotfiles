@@ -7,17 +7,16 @@ windows:
       - shell_command:
         - cd ~/cs1680/1680-dev/home/
         - clear
-        - echo "Entered CSCI1680 development instance."
   - window_name: build-test
-    layout: main-vertical 
-    panes:
-      - shell_command:
-        - ~/cs1680/1680-dev/run-container
-        - clear
+    layout: main-horizontal
+    panes: 
       - shell_command:
         - ~/cs1680/1680-dev/run-container
         - clear
         - wireshark
       - shell_command:
         - cd ~/cs1680/1680-dev/home/
+        - clear
+      - shell_command:
+        - ~/cs1680/1680-dev/run-container
         - clear
