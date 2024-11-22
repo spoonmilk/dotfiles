@@ -7,6 +7,7 @@ windows:
       - shell_command:
         - cd ~/cs1680/1680-dev/home/
         - clear
+        - echo "Entered CSCI1680 development instance."
   - window_name: build-test
     layout: main-vertical 
     panes:

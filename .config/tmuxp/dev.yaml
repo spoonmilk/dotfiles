@@ -1,0 +1,11 @@
+start_directory: "./"
+session_name: development-work
+windows:
+  - window_name: dev
+  - window_name: term
+    layout: tiled
+    panes:
+      - fastfetch
+      - shell_commands: 
+        - clear
+        - echo "What's up, doc?"
