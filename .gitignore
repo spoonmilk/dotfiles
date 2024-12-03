@@ -8,3 +8,8 @@
 .config/create-next-app-nodejs
 .config/fish
 .config/tmuxp
+.config/nvim/node_modules/.bin
+.config/nvim/node_modules
+.config/nvim/node_modules
+.config/nvim/package-lock.json
+.config/nvim/package.json

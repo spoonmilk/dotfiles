@@ -1,6 +1,12 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+local keymap = vim.keymap.set
+if not keymap then
+  vim.notify('vim.keymap.set is not available', vim.log.levels.ERROR)
+  return
+end
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
