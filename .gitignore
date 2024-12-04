@@ -13,3 +13,7 @@
 .config/nvim/node_modules
 .config/nvim/package-lock.json
 .config/nvim/package.json
+.config/dconf
+.config/doom
+.config/emacs
+.config/go/telemetry/local
