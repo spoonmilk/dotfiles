@@ -11,13 +11,16 @@ return {
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
-    dashboard = {
+    dim = { enabled = true },
+    zen = { enabled = true },
+    scroll = { enabled = true },
+    -- dashboard = {
 
-      sections = {
-        { section = 'header' },
-        { section = 'keys', gap = 1, padding = 1 },
-        { section = 'startup' },
-      },
-    },
+    --   sections = {
+    --     { section = 'header' },
+    --     { section = 'keys', gap = 1, padding = 1 },
+    --     { section = 'startup' },
+    --   },
+    -- },
   },
 }

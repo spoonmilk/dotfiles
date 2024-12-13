@@ -42,6 +42,11 @@ vim.g.vimtex_view_zathura_options = '-reuse-instance'
 
 vim.fn.has 'nvim-0.8'
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.bo.softtabstop = 4
+
 -- [[ Setting options ]]
 require 'options'
 

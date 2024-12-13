@@ -18,3 +18,4 @@
 .config/emacs
 .config/go/telemetry/local
 .config/wxchordpro
+.config/fastfetch
