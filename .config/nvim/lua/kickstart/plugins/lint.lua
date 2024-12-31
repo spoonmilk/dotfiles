@@ -6,6 +6,20 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
+        rust = { 'clippy' },
+        go = { 'golangci-lint' },
+        c = { 'cpplint' },
+        cpp = { 'cpplint' },
+        python = { 'pylint', 'flake8' },
+        typescript = { 'eslint' },
+        javascript = { 'eslint' },
+        typescriptreact = { 'eslint' },
+        javascriptreact = { 'eslint' },
+        css = { 'stylelint' },
+        scss = { 'stylelint' },
+        tailwindcss = { 'stylelint' },
+        lua = { 'luacheck' },
+        lisp = { 'sbcl' },
         markdown = { 'markdownlint' },
       }
 

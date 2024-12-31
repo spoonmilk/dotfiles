@@ -1,0 +1,5 @@
+most_recent = "spoonmilk"
+schemes = [[
+    "spoonmilk",
+    { norm = { effects = "Default", fg = "White" }, rs = { effects = "Default", fg = "White" }, file = { effects = "Default", fg = "LightBlue" }, dir = { effects = "Bold", fg = "Blue" }, link = { effects = "Default", fg = "Gray" }, pipe = { effects = "Default", fg = "LightPurple" }, door = { effects = "Default", fg = "Purple" }, block = { effects = "Default", fg = "Yellow" }, char = { effects = "Bold", fg = "Yellow" }, orphan = { effects = "Default", fg = "Red" }, sock = { effects = "Bold", fg = "Orange" }, setuid = { effects = "Default", fg = "Blue" }, setgid = { effects = "Default", fg = "Blue" }, sticky_other_writable = { effects = "Default", fg = "Blue" }, other_writable = { effects = "Default", fg = "LightBlue" }, sticky = { effects = "Bold", fg = "LightBlue" }, exec = { effects = "Default", fg = "Green" }, missing = { effects = "Default", fg = "Red" }, extensions = [] },
+]]
