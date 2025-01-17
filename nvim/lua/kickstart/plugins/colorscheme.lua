@@ -1,28 +1,16 @@
-return {
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    -- 'neanias/everforest-nvim',
-    -- 'vague2k/vague.nvim',
-    'folke/tokyonight.nvim',
-    -- For zenbones: Enable these together
-    -- 'zenbones-theme/zenbones.nvim',
-    -- dependencies = 'rktjmp/lush.nvim',
-    -- 'daschw/leaf.nvim',
+local function set_colorscheme()
+  if vim.o.background == 'dark' then
+    vim.cmd 'colorscheme zenbones'
+  else
+    vim.cmd 'colorscheme nightfox'
+  end
+end
 
-    -- 'catppuccin/nvim',
-    lazy = false,
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- vim.cmd.colorscheme 'catppuccin'
-      vim.cmd.colorscheme 'tokyonight'
-      -- vim.cmd.colorscheme 'vague'
-      -- vim.g.zenbones = { solid_line_nr = true, darken_comments = 45, lightness = 'dim', darkness = 'warm' }
-      -- vim.cmd.colorscheme 'forestbones'
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-    end,
-  },
-}
+-- Apply colorscheme on startup
+set_colorscheme()
+
+-- Optional: Automatically switch when background changes
+vim.api.nvim_create_autocmd('OptionSet', {
+  pattern = 'background',
+  callback = set_colorscheme,
+})

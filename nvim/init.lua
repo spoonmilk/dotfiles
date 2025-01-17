@@ -58,5 +58,24 @@ require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
+
+-- Auto-switch colorscheme based on background mode
+local function set_colorscheme()
+  if vim.o.background == 'dark' then
+    vim.cmd 'colorscheme zenbones'
+  else
+    vim.cmd 'colorscheme dayfox'
+  end
+end
+
+-- Apply colorscheme on startup
+set_colorscheme()
+
+-- React to background changes dynamically
+vim.api.nvim_create_autocmd('OptionSet', {
+  pattern = 'background',
+  callback = set_colorscheme,
+})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
