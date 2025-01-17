@@ -6,17 +6,18 @@ return {
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     -- 'neanias/everforest-nvim',
     -- 'vague2k/vague.nvim',
-    --
+    'folke/tokyonight.nvim',
     -- For zenbones: Enable these together
     -- 'zenbones-theme/zenbones.nvim',
     -- dependencies = 'rktjmp/lush.nvim',
+    -- 'daschw/leaf.nvim',
 
-    'catppuccin/nvim',
+    -- 'catppuccin/nvim',
     lazy = false,
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      vim.cmd.colorscheme 'catppuccin'
-      -- vim.cmd.colorscheme 'everforest'
+      -- vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'tokyonight'
       -- vim.cmd.colorscheme 'vague'
       -- vim.g.zenbones = { solid_line_nr = true, darken_comments = 45, lightness = 'dim', darkness = 'warm' }
       -- vim.cmd.colorscheme 'forestbones'
@@ -25,4 +26,3 @@ return {
     end,
   },
 }
--- vim: ts=2 sts=2 sw=2 et
