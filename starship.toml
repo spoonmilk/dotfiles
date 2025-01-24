@@ -1,3 +1,9 @@
+command_timeout = 1000
+
+format = """
+[ ](bold white)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
+[ ❯ ](bold green)"""
+
 [aws]
 symbol = "  "
 
@@ -10,50 +16,60 @@ symbol = " "
 [conda]
 symbol = " "
 
-[crystal]
-symbol = " "
-
 [dart]
 symbol = " "
 
 [directory]
-read_only = " 󰌾"
+read_only = " "
+truncation_length = 7
+truncation_symbol = "…/"
+
+[hostname]
+ssh_only = false
+format = '[$hostname]($style) '
+style = "blue bold"
+trim_at = "."
+disabled = false
+
+[username]
+style_user = "blue bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
 
 [docker_context]
 symbol = " "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
 symbol = " "
 
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
 [git_branch]
 symbol = " "
+
+[git_status]
+ahead = "⇡🏎💨${count}"
+diverged = "⇕⇡😵${ahead_count}⇣${behind_count}"
+behind = "⇣😰${count}"
+conflicted = "🏳 "
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted ="🗑 "
 
 [golang]
 symbol = " "
 
-[guix_shell]
-symbol = " "
-
 [haskell]
 symbol = " "
 
-[haxe]
-symbol = " "
-
 [hg_branch]
 symbol = " "
-
-[hostname]
-ssh_symbol = " "
 
 [java]
 symbol = " "
@@ -61,20 +77,17 @@ symbol = " "
 [julia]
 symbol = " "
 
-[kotlin]
-symbol = " "
-
 [lua]
 symbol = " "
 
 [memory_usage]
-symbol = "󰍛 "
+symbol = " "
 
 [meson]
-symbol = "󰔷 "
+symbol = "喝 "
 
 [nim]
-symbol = "󰆥 "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -82,83 +95,40 @@ symbol = " "
 [nodejs]
 symbol = " "
 
-[ocaml]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
 [package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[pijul_channel]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = " "
 
 [rlang]
-symbol = "󰟔 "
+symbol = "ﳒ "
 
 [ruby]
 symbol = " "
 
 [rust]
-symbol = "󱘗 "
+symbol = " "
 
 [scala]
 symbol = " "
 
-[swift]
-symbol = " "
+[spack]
+symbol = "🅢 "
 
-[zig]
-symbol = " "
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌 "
+discharging_symbol = "⚡️"
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
