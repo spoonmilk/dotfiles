@@ -1,6 +1,6 @@
 local function set_colorscheme()
   if vim.o.background == 'dark' then
-    vim.cmd 'colorscheme zenbones'
+    vim.cmd 'colorscheme monet'
   else
     vim.cmd 'colorscheme nightfox'
   end
