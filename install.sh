@@ -8,10 +8,17 @@ declare -A FILES_TO_SYMLINK=(
   ["$DOTFILES_DIR/kitty"]="$HOME/.config/kitty"
   ["$DOTFILES_DIR/lazygit"]="$HOME/.config/lazygit"
   ["$DOTFILES_DIR/nvim"]="$HOME/.config/nvim"
+  ["$DOTFILES_DIR/zellij"]="$HOME/.config/zellij"
   ["$DOTFILES_DIR/.tmux"]="$HOME/.tmux"
+  ["$DOTFILES_DIR/tmux"]="$HOME/.config/tmux"
   ["$DOTFILES_DIR/.tmux.conf"]="$HOME/.tmux.conf"
   ["$DOTFILES_DIR/starship.toml"]="$HOME/.config/starship.toml"
 )
+
+# Add custom tmux powerline
+add_powerline() {
+  cp $DOTFILES_DIR/tmux/bin/tmux-status $HOME/.local/bin/tmux-status
+}
 
 # Function to create symlinks
 create_symlinks() {
@@ -34,6 +41,7 @@ create_symlinks() {
 }
 
 # Run the symlink creation
+add_powerline
 create_symlinks
 
 echo "Dotfiles have been installed successfully!"

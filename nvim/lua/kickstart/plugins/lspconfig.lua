@@ -181,7 +181,24 @@ return {
       local servers = {
         clangd = {},
         gopls = {},
-        pyright = {},
+        pylsp = {
+          settings = {
+
+            pylsp = {
+              plugins = {
+                pycodestyle = {
+                  ignore = { 'W391', '4006' },
+                  maxLineLength = 100,
+                },
+                pyflakes = { enabled = false },
+                pylint = { enabled = true },
+                yapf = { enabled = false },
+                flake8 = { enabled = true },
+                mypy = { enabled = false },
+              },
+            },
+          },
+        },
         rust_analyzer = {},
         texlab = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs

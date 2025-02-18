@@ -8,7 +8,7 @@ bold_italic_font auto
 allow_remote_control yes
 
 # BEGIN_KITTY_THEME
-# Zenbones Light
+# Zenbones Dark
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -18,16 +18,21 @@ include current-theme.conf
 map ctrl+shift+alt+l kitten themes "Zenbones Light" 
 
 # Switch to Dark Theme
-map ctrl+shift+alt+d kitten themes "Zenbones Dark"
+map ctrl+shift+alt+d kitten themes "citylights"
 
-# hide_window_decorations yes
-
+# CURSOR TRAIL
 cursor_trail 1
-
 cursor_trail_decay 0.1 0.4
 
-# cursor_trail 1
-# background_opacity 0.9
+# WINDOW SETTINGS
+hide_window_decorations yes
+
+# BACKGROUND IMAGE SETTINGS
+background_image /home/spoonmilk/Pictures/citizen-sleeper.png
+background_image_layout cscaled
+background_tint 0.7
+
+# CONFIRM WINDOW CLOSE
 confirm_os_window_close 0
 
 
