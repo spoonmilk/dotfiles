@@ -187,8 +187,8 @@ return {
             pylsp = {
               plugins = {
                 pycodestyle = {
-                  ignore = { 'W391', '4006' },
-                  maxLineLength = 100,
+                  ignore = { 'W391', '4006', 'C0103' },
+                  maxLineLength = 120,
                 },
                 pyflakes = { enabled = false },
                 pylint = { enabled = true },

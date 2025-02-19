@@ -1,63 +1,53 @@
+#  ██████████ ████     ████ ██     ██ ██     ██
+# ░░░░░██░░░ ░██░██   ██░██░██    ░██░░██   ██
+#     ░██    ░██░░██ ██ ░██░██    ░██ ░░██ ██
+#     ░██    ░██ ░░███  ░██░██    ░██  ░░███
+#     ░██    ░██  ░░█   ░██░██    ░██   ██░██
+#     ░██    ░██   ░    ░██░██    ░██  ██ ░░██
+#     ░██    ░██        ░██░░███████  ██   ░░██
+#     ░░     ░░         ░░  ░░░░░░░  ░░     ░░
+#
+#  ▓▓▓▓▓▓▓▓▓▓
+# ░▓ author ▓ xero <x@xero.style>
+# ░▓ code   ▓ https://code.x-e.ro/dotfiles
+# ░▓ mirror ▓ https://git.io/.files
+# ░▓▓▓▓▓▓▓▓▓▓
+# ░░░░░░░░░░
 
-set -g default-terminal "tmux-256color"
-set-option -sa terminal-overrides ",xterm-256color:RGB"
+# shell
+set -g default-command $SHELL
+set -g default-shell $SHELL
 
-# If prefix is 'C-a'
-unbind C-b
-set -g prefix C-a
-bind C-a send-prefix
-bind a last-window
-
-unbind %
-bind | split-window -h
-
-unbind '"'
-bind - split-window -v
-
-# Resize panes
-bind-key -r -T prefix       j              resize-pane -U 5
-bind-key -r -T prefix       k            resize-pane -D 5
-bind-key -r -T prefix       l            resize-pane -L 5
-bind-key -r -T prefix       h           resize-pane -R 5
-bind-key -r -T prefix       J              resize-pane -U
-bind-key -r -T prefix       K            resize-pane -D
-bind-key -r -T prefix       L            resize-pane -L
-bind-key -r -T prefix       H           resize-pane -R
-
-bind -r m resize-pane -Z
-
-set -g mouse on
-
+# start with window 1 (instead of 0)
 set -g base-index 1
+
+# renumber windows after closing
 set -g renumber-windows on
 
-# Focus events enabled for terminals that support them
-set -g focus-events on
+# start with pane 1
+set -g pane-base-index 1
 
-# Super useful when using "grouped sessions" and multi-monitor setup
-setw -g aggressive-resize on
+# remove esc delay
+set -sg escape-time 0
 
-# Easier and faster switching between next/prev window
-bind C-p previous-window
-bind C-n next-window
+# history
+set -g history-limit 10000
 
-# Source .tmux.conf as suggested in `man tmux`
-bind R source-file '/home/svdv/.tmux.conf'
+# allow terminal scrolling
+set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
-# auto window rename
-set-window-option -g automatic-rename
+# true colors
+set-option -sa terminal-features ',xterm-256color:RGB'
 
-set-window-option -g mode-keys vi
-if-shell "test '\( #{$TMUX_VERSION_MAJOR} -eq 2 -a #{$TMUX_VERSION_MINOR} -ge 4 \)'" 'bind-key -Tcopy-mode-vi v send -X begin-selection; bind-key -Tcopy-mode-vi y send -X copy-selection-and-cancel'
-if-shell '\( #{$TMUX_VERSION_MAJOR} -eq 2 -a #{$TMUX_VERSION_MINOR} -lt 4\) -o #{$TMUX_VERSION_MAJOR} -le 1' 'bind-key -t vi-copy v begin-selection; bind-key -t vi-copy y copy-selection'
+# use vi mode
+setw -g mode-keys vi
+set -g status-keys vi
 
-# Transparant status bar
-set-option -g status-style bg=default
+# pleb/ipad mode
+set -g mouse on
 
-# skip "kill-pane 1? (y/n)" prompt
-bind-key x kill-pane 
-# don't exit from tmux when closing a session
-set -g detach-on-destroy off
+# focusing
+set-option -g focus-events on
 
 # panes
 set -g pane-border-style "fg=color0"
@@ -100,13 +90,45 @@ set-option -g bell-action none
 # tmux clock
 set -g clock-mode-color color4
 
-# status line
-set -g status-right-length 100
-set -g status-right '#(~/.local/bin/tmux-status)'
-set -g status-left '#{tmux_mode_indicator}'
+# change prefix to backtick
+unbind C-b
+set-option -g prefix a
+bind a send-prefix
 
-# tpm plugin
-set -g @plugin 'tmux-plugins/tpm' 
+# vim style copy paste mode
+unbind [
+bind escape copy-mode
+unbind p
+bind p paste-buffer
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel "xsel -i" \; send-keys enter
+bind-key -T copy-mode-vi 'Y' send -X copy-pipe-and-cancel "tmux loadb -" \; send-keys enter
+
+# splitting
+unbind %
+bind h split-window -v
+unbind '"'
+bind v split-window -h
+
+# zoom split
+unbind z
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+bind z if-shell "$is_vim" "send-keys ,z" "resize-pane -Z"
+bind Z resize-pane -Z
+
+# vim style commands
+bind : command-prompt
+
+# source config file
+bind r source-file ~/.config/tmux/tmux.conf \; display-message "█▓░ reloaded"
+
+# other random key-binding changes
+bind x kill-pane
+bind t set status
+
+# tmux plugins
+set -g @plugin 'tmux-plugins/tpm'
 setenv -g TMUX_PLUGIN_MANAGER_PATH '~/.config/tmux/plugins/'
 
 # sticky fingers
@@ -169,25 +191,3 @@ bind space display-popup -b "heavy" -S 'bg=color0,fg=color4' -w 70% -h 70% -E "C
 bind e display-popup -b "heavy" -S 'bg=color0,fg=color4' -w 70% -h 70% -E "emoji"
 
 run '~/.config/tmux/plugins/tpm/tpm'
-
-# LEGACY
-
-# # status bar colors
-# set -g status-left "#[fg=#a3be8c]󰰡 #[fg=#88c0d0]#S#[bg=#191919]"  # Green + cyan
-# set -g window-status-format "#[bg=#191919]#[fg=#d08770]#I #[fg=#ebcb8b]#W #[fg=#4c566a]"
-# set -g window-status-current-format "#[fg=#88c0d0]#I #[fg=#a3be8c]#W #[fg=#88c0d0]"
-# set -g status-justify centre
-# set -g status-right '#[fg=#d08770] #[fg=#ebcb8b] %Y-%m-%d #[fg=#88c0d0]%H:%M'
-# 
-
-# # List of tmux plugins
-# set -g @plugin 'christoomey/vim-tmux-navigator'
-# set -g @plugin 'tpope/vim-sensible'
-# set -g @plugin 'tmux-plugins/tmux-yank'
-# set -g @plugin 'tmux-plugins/tmux-resurrect'
-# set -g @plugin 'tmux-plugins/tmux-continuum'
-# set -g @plugin 'sainnhe/tmux-fzf'
-# TMUX_FZF_LAUNCH_KEY="C-f"
-# TMUX_FZF_PREVIEW=1
-
-

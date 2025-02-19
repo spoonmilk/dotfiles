@@ -1,5 +1,5 @@
 # BEGIN_KITTY_FONTS
-font_family      family='JetBrainsMono Nerd Font' postscript_name=JetBrainsMonoNF-Medium
+font_family      family='JuliaMono Nerd Font' postscript_name=JetBrainsMonoNF-Medium
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -8,7 +8,7 @@ bold_italic_font auto
 allow_remote_control yes
 
 # BEGIN_KITTY_THEME
-# Zenbones Dark
+# Zenbones Light
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -21,16 +21,28 @@ map ctrl+shift+alt+l kitten themes "Zenbones Light"
 map ctrl+shift+alt+d kitten themes "citylights"
 
 # CURSOR TRAIL
-cursor_trail 1
-cursor_trail_decay 0.1 0.4
+# cursor_trail 1
+# cursor_trail_decay 0.1 0.4
 
 # WINDOW SETTINGS
 hide_window_decorations yes
+initial_window_width 100
+initial_window_height 40
+window_padding_width 10
+window_padding_height 10
+
+# SCROLLBAR SETTINGS
+scrollbar_width 10
+scrollbar_hide_when_typing yes
+scrollbar_hide_when_mouse_idle yes
 
 # BACKGROUND IMAGE SETTINGS
 background_image /home/spoonmilk/Pictures/citizen-sleeper.png
 background_image_layout cscaled
-background_tint 0.7
+background_tint 0.9
+dim_opacity 0.4
+background_opacity 0.85
+background_blur 2
 
 # CONFIRM WINDOW CLOSE
 confirm_os_window_close 0
