@@ -12,6 +12,7 @@ declare -A FILES_TO_SYMLINK=(
   ["$DOTFILES_DIR/tmux"]="$HOME/.config/tmux"
   ["$DOTFILES_DIR/tmux/.tmux.conf"]="$HOME/.tmux.conf"
   ["$DOTFILES_DIR/starship.toml"]="$HOME/.config/starship.toml"
+  ["$DOTFILES_DIR/helix"]="$HOME/.config/helix"
 )
 
 # Add custom tmux powerline

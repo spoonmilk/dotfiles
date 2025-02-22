@@ -1,8 +1,8 @@
 command_timeout = 1000
 
 format = """
-[ ](bold white)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
-[ ❯ ](bold green)"""
+[ ]($style)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
+[ ❯ ]($style)"""
 
 [aws]
 symbol = "  "
@@ -27,13 +27,12 @@ truncation_symbol = "…/"
 [hostname]
 ssh_only = false
 format = '[$hostname]($style) '
-style = "blue bold"
 trim_at = "."
 disabled = false
 
 [username]
-style_user = "blue bold"
-style_root = "red bold"
+style_user = "$style"
+style_root = "$style"
 format = "[$user]($style) "
 disabled = false
 show_always = true
@@ -53,7 +52,7 @@ symbol = " "
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed) ]($style)"
-style = "cyan"
+style = "$style"
 conflicted = "​"
 untracked = "​"
 modified = "​"
