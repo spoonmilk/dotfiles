@@ -1,7 +1,7 @@
-return 
-{
-  'folke/drop.nvim',
-  opts = {
-    -- ...
-  },
-}
+-- return
+-- {
+--   'folke/drop.nvim',
+--   opts = {
+--     -- ...
+--   },
+-- }
