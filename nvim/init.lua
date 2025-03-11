@@ -62,7 +62,7 @@ require 'lazy-plugins'
 -- Auto-switch colorscheme based on background mode
 local function set_colorscheme()
   if vim.o.background == 'dark' then
-    vim.cmd 'colorscheme kanagawa-paper'
+    vim.cmd 'colorscheme kanagawa-paper-ink'
   else
     vim.cmd 'colorscheme dayfox'
   end
