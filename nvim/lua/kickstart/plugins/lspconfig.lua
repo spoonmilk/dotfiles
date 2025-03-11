@@ -220,7 +220,7 @@ return {
           filetypes = { 'c', 'h' },
           init_options = {
             cache = {
-              directory = '~/src/ccls',
+              directory = '~/src/ccls/build/ccls',
             },
           },
         },
@@ -239,7 +239,9 @@ return {
       --
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
+      local ensure_installed = vim.tbl_filter(function(server)
+        return server ~= 'ccls'
+      end, vim.tbl_keys(servers or {}))
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
