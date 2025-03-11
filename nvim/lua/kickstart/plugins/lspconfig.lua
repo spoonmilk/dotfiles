@@ -217,10 +217,12 @@ return {
         },
         astro = {},
         ccls = {
-          filetypes = { 'c', 'h' },
+          cmd = { '/home/spoonmilk/src/ccls/build/ccls' }, -- Path to your built ccls binary
+          root_dir = require('lspconfig.util').root_pattern('compile_commands.json', '.ccls', '.git'),
+          filetypes = { 'c', 'h', 'cpp', 'hpp', 'cc', 'hh', 'cxx', 'hxx' },
           init_options = {
             cache = {
-              directory = '~/src/ccls/build/ccls',
+              directory = '.ccls-cache',
             },
           },
         },
@@ -261,6 +263,7 @@ return {
           end,
         },
       }
+      require('lspconfig').ccls.setup(servers.ccls)
     end,
   },
 }
