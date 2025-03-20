@@ -180,24 +180,6 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         gopls = {},
-        pylsp = {
-          settings = {
-
-            pylsp = {
-              plugins = {
-                pycodestyle = {
-                  ignore = { 'W391', '4006', 'C0103' },
-                  maxLineLength = 120,
-                },
-                pyflakes = { enabled = false },
-                pylint = { enabled = true },
-                yapf = { enabled = false },
-                flake8 = { enabled = true },
-                mypy = { enabled = false },
-              },
-            },
-          },
-        },
         rust_analyzer = {},
         texlab = {},
         julials = {},
@@ -216,6 +198,7 @@ return {
           },
         },
         astro = {},
+        ruff = {},
         ccls = {
           cmd = { '/home/spoonmilk/src/ccls/build/ccls' }, -- Path to your built ccls binary
           root_dir = require('lspconfig.util').root_pattern('compile_commands.json', '.ccls', '.git'),
@@ -226,6 +209,7 @@ return {
             },
           },
         },
+        hls = {},
       }
 
       -- Ensure the servers and tools above are installed
