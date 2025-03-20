@@ -209,6 +209,7 @@ return {
             },
           },
         },
+        hls = {},
       }
 
       -- Ensure the servers and tools above are installed
