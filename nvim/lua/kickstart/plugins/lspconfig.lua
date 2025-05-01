@@ -198,7 +198,21 @@ return {
           },
         },
         astro = {},
-        ruff = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                -- search venv/lib and workspace for packages/types
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                -- only lint files you have open
+                diagnosticMode = 'openFilesOnly',
+                -- basic type checking: enough to catch real mistakes, not pedantry
+                typeCheckingMode = 'basic',
+              },
+            },
+          },
+        },
         ccls = {
           cmd = { '/home/spoonmilk/src/ccls/build/ccls' }, -- Path to your built ccls binary
           root_dir = require('lspconfig.util').root_pattern('compile_commands.json', '.ccls', '.git'),

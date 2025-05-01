@@ -13,6 +13,7 @@ return {
     words = { enabled = true },
     dim = { enabled = true },
     zen = { enabled = true },
+    animation = { enabled = true },
     scroll = { enabled = true },
     dashboard = {
       sections = {
