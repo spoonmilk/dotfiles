@@ -15,7 +15,7 @@ require('lazy').setup({
 
   --NOTE: Plugins are located in plugins/, colorschemes in colors/
   { import = 'plugins' },
-  { import = 'colors.plugins' },
+  { import = 'colors' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
