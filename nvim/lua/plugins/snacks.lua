@@ -15,6 +15,7 @@ return {
     zen = { enabled = true },
     animation = { enabled = true },
     scroll = { enabled = true },
+    explorer = { enabled = true },
     dashboard = {
       sections = {
         { section = 'header' },
@@ -23,5 +24,18 @@ return {
       },
       preset = {},
     },
+    picker = {
+      sources = {
+        explorer = {
+          focus = 'input',
+          auto_close = true,
+        },
+      },
+    },
   },
+  config = function()
+    vim.keymap.set('n', '\\', function()
+      require('snacks').explorer()
+    end, { desc = 'Open Snacks Explorer' })
+  end,
 }
