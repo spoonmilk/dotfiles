@@ -31,8 +31,8 @@ trim_at = "."
 disabled = false
 
 [username]
-style_user = "$style"
-style_root = "$style"
+style_user = "bold"
+style_root = "bold"
 format = "[$user]($style) "
 disabled = false
 show_always = true
@@ -49,10 +49,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 
-
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed) ]($style)"
-style = "$style"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed) ]($style)"
+style = "bold"
 conflicted = "​"
 untracked = "​"
 modified = "​"
@@ -123,14 +122,15 @@ full_symbol = "🔋"
 charging_symbol = "🔌 "
 discharging_symbol = "⚡️"
 
-[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+[[battery.display]]
 threshold = 10
 style = "bold red"
 
-[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+[[battery.display]]
 threshold = 30
 style = "bold yellow"
 
 [[battery.display]]
 threshold = 100
 style = "bold green"
+
