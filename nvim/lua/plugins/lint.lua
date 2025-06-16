@@ -15,9 +15,6 @@ return {
         javascript = { 'eslint' },
         typescriptreact = { 'eslint' },
         javascriptreact = { 'eslint' },
-        css = { 'stylelint' },
-        scss = { 'stylelint' },
-        tailwindcss = { 'stylelint' },
         lua = { 'luacheck' },
         lisp = { 'sbcl' },
       }

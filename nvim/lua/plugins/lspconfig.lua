@@ -180,7 +180,18 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         gopls = {},
-        rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              checkOnSave = {
+                command = 'clippy',
+              },
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
+        },
         texlab = {},
         julials = {},
         lua_ls = {
