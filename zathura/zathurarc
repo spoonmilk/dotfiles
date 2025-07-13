@@ -1,6 +1,6 @@
 # Open pdfs in "best fit" mode
 set adjust-open "best-fit"
 # Recolor PDFs
-# set recolor true
-# set recolor-keephue true
+set recolor true
+set recolor-keephue true
 
