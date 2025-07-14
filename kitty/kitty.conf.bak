@@ -23,11 +23,11 @@ scrollbar_hide_when_mouse_idle yes
 
 # BACKGROUND IMAGE SETTINGS
 # background_image /home/spoonmilk/Pictures/wind-rises.jpg
-background_image_layout cscaled
-background_tint 0.9
-dim_opacity 0.4
-# background_opacity 0.95
-# background_blur 2
+# background_image_layout cscaled
+# background_tint 0.9
+# dim_opacity 0.4
+background_opacity 0.90
+background_blur 2
 
 # CONFIRM WINDOW CLOSE
 confirm_os_window_close 0
@@ -41,6 +41,6 @@ bold_italic_font auto
 # END_KITTY_FONTS
 
 # BEGIN_KITTY_THEME
-# Atelier Lakeside Dark
+# kanagawabones
 include current-theme.conf
 # END_KITTY_THEME
