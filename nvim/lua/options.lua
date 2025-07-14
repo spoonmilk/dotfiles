@@ -63,4 +63,8 @@ vim.o.scrolloff = 10
 
 vim.o.confirm = true
 
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.smartindent = true
+
 -- vim: ts=2 sts=2 sw=2 et
