@@ -220,7 +220,20 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              checkOnSave = {
+                command = 'clippy',
+              },
+              cargo = {
+                allFeatures = true,
+              },
+            },
+          },
+        },
+        texlab = {},
+        julials = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -235,6 +248,8 @@ return {
             },
           },
         },
+        astro = {},
+        hls = {},
       }
 
       -- Ensure the servers and tools above are installed

@@ -1,7 +1,7 @@
 command_timeout = 1000
 
 format = """
-[ ]($style)$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
+[ ]($style)$username$kubernetes$directory$git_branch$git_commit$git_state$git_status$docker_context$package$golang$helm$java$cmake$julia$kotlin$lua$nim$nodejs$python$ruby$rust$swift$terraform$aws$gcloud$azure $battery               
 [ ❯ ]($style)"""
 
 [aws]
@@ -24,14 +24,8 @@ read_only = " "
 truncation_length = 7
 truncation_symbol = "…/"
 
-[hostname]
-ssh_only = false
-format = '[$hostname]($style) '
-trim_at = "."
-disabled = false
-
 [username]
-style_user = "bold"
+style_user = "bold magenta"
 style_root = "bold"
 format = "[$user]($style) "
 disabled = false
