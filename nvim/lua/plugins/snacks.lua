@@ -3,6 +3,22 @@ return {
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
+  keys = {
+    {
+      '<leader>bz',
+      function()
+        Snacks.zen()
+      end,
+      desc = 'Toggle Snacks Zen Mode',
+    },
+    {
+      '\\',
+      function()
+        Snacks.explorer.open()
+      end,
+      desc = 'Open Snacks Explorer',
+    },
+  },
   opts = {
     indent = {
       indent = { enabled = true },
@@ -10,11 +26,8 @@ return {
         enabled = false,
       },
     },
-    explorer = { enabled = true, layout = {
-      cycle = true,
-    } },
+    explorer = { enabled = true, replace_netrw = false },
     bigfile = { enabled = true },
-    dashboard = { enabled = true },
     dim = { enabled = true },
     input = { enabled = true },
     picker = { enabled = true },
@@ -22,12 +35,12 @@ return {
     quickfile = { enabled = true },
     scope = { enabled = true },
     statuscolumn = { enabled = true },
-    words = { enabled = true },
+    words = { enabled = false },
     image = { enabled = true },
+    zen = { enabled = true },
   },
 
-  config = function()
-    local snacks = require 'snacks'
-    vim.keymap.set('n', '\\', snacks.explorer.open, { desc = 'Open Snacks Explorer' })
+  config = function(_, opts)
+    require('snacks').setup(opts)
   end,
 }
