@@ -1,0 +1,3 @@
+return {
+  'yuukiflow/Arduino-Nvim',
+}
