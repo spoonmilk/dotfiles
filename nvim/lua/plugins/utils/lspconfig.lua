@@ -250,6 +250,31 @@ return {
         },
         astro = {},
         hls = {},
+        -- ARM Assembly Language Server
+        asm_lsp = {
+          filetypes = { 'asm', 'vmasm', 's', 'S' },
+          settings = {
+            ['asm-lsp'] = {
+              -- Configure for ARM assembly
+              assemblers = {
+                gas = {
+                  executable = 'as',
+                  args = { '--64' },
+                },
+              },
+              -- Enable ARM-specific features
+              instruction_sets = { 'x86', 'x86_64', 'arm', 'aarch64' },
+              -- Configure completion and diagnostics
+              completion = {
+                enable = true,
+                trigger_characters = { '.', ':' },
+              },
+              diagnostics = {
+                enable = true,
+              },
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -268,6 +293,7 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'asm-lsp', -- ARM Assembly Language Server
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

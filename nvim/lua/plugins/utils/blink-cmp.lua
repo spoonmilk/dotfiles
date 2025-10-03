@@ -31,7 +31,6 @@ return {
         opts = {},
       },
       'folke/lazydev.nvim',
-      'fang2hou/blink-copilot',
     },
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
@@ -124,14 +123,6 @@ return {
       signature = { enabled = true },
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
-        providers = {
-          copilot = {
-            name = 'copilot',
-            module = 'blink-copilot',
-            score_offset = 100,
-            async = true,
-          },
-        },
       },
     },
   },

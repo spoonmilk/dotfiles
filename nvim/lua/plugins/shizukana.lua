@@ -6,6 +6,5 @@ return {
     require('shizukana').setup {
       -- your config here
     }
-    vim.cmd.colorscheme 'shizukana'
   end,
 }

@@ -23,6 +23,7 @@ symbol = " "
 read_only = " "
 truncation_length = 7
 truncation_symbol = "…/"
+style = "blue"
 
 [username]
 style_user = "bold magenta"
