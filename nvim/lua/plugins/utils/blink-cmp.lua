@@ -69,7 +69,6 @@ return {
         nerd_font_variant = 'normal',
         -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
         kind_icons = {
-          Copilot = '',
           Text = '󰉿',
           Method = '󰊕',
           Function = '󰊕',
@@ -122,7 +121,7 @@ return {
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
       },
     },
   },
