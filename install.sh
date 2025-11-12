@@ -6,15 +6,14 @@ DOTFILES_DIR="$HOME/dotfiles"
 # Array of files and directories to symlink
 declare -A FILES_TO_SYMLINK=(
   ["$DOTFILES_DIR/kitty"]="$HOME/.config/kitty"
-  ["$DOTFILES_DIR/lazygit"]="$HOME/.config/lazygit"
   ["$DOTFILES_DIR/nvim"]="$HOME/.config/nvim"
   ["$DOTFILES_DIR/zellij"]="$HOME/.config/zellij"
   ["$DOTFILES_DIR/tmux"]="$HOME/.config/tmux"
   ["$DOTFILES_DIR/tmux/.tmux.conf"]="$HOME/.tmux.conf"
   ["$DOTFILES_DIR/starship.toml"]="$HOME/.config/starship.toml"
-  ["$DOTFILES_DIR/helix"]="$HOME/.config/helix"
   ["$DOTFILES_DIR/zathura"]="$HOME/.config/zathura"
   ["$DOTFILES_DIR/.vimrc"]="$HOME/.vimrc"
+  ["$DOTFILES_DIR/wezterm"]="$HOME/.config/wezterm"
 )
 
 # Add custom tmux powerline
