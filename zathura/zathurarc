@@ -1,6 +1,13 @@
 # Open pdfs in "best fit" mode
 set adjust-open "best-fit"
-# Recolor PDFs
-# set recolor true
-# set recolor-keephue true
 
+# One page per row by default
+set pages-per-row 1
+
+# stop at page boundaries 
+set scroll-page-aware "true"
+set smooth-scroll "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+
+set guioptions "sv"
