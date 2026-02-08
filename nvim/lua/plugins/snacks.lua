@@ -3,22 +3,6 @@ return {
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
-  keys = {
-    {
-      '<leader>bz',
-      function()
-        Snacks.zen()
-      end,
-      desc = 'Toggle Snacks Zen Mode',
-    },
-    {
-      '\\',
-      function()
-        Snacks.explorer.open()
-      end,
-      desc = 'Open Snacks Explorer',
-    },
-  },
   opts = {
     indent = {
       indent = { enabled = true },
@@ -30,7 +14,7 @@ return {
     bigfile = { enabled = true },
     dim = { enabled = true },
     input = { enabled = true },
-    picker = { enabled = true },
+    picker = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
