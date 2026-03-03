@@ -212,6 +212,10 @@ return {
         tinymist = {
           settings = {
             formatterMode = 'typstfmt',
+            completion = {
+              triggerOnSnippetPlaceholders = false,
+              postfix = false,
+            },
           },
         },
         -- ARM Assembly Language Server
