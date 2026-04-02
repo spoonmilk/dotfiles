@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/spoonmilk/university/spring26/cs-architecture-1952Y/gem5'
+let g:netrw_dirhist_2='/home/httpd/html'
+let g:netrw_dirhist_1='/home/httpd/html/th_fourier'
+let g:netrw_dirhist_0='/home/httpd/html'
+let g:netrw_dirhist_9='/home/httpd/html/attic'
+let g:netrw_dirhist_8='/home/httpd/html'
+let g:netrw_dirhist_7='/home/pcurtin/Harkness'
+let g:netrw_dirhist_6='/home/pcurtin'
+let g:netrw_dirhist_5='/home/httpd/html/events'
+let g:netrw_dirhist_4='/mnt/clara/home'
