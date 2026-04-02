@@ -105,7 +105,6 @@ return {
               end,
             })
           end
-
         end,
       })
 
@@ -194,6 +193,7 @@ return {
             },
           },
         },
+        jinja_lsp = {},
         ts_ls = {
           settings = {
             typescript = {
