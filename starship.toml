@@ -23,10 +23,9 @@ symbol = " "
 read_only = " "
 truncation_length = 7
 truncation_symbol = "…/"
-style = "blue"
 
 [username]
-style_user = "bold magenta"
+style_user = "bold"
 style_root = "bold"
 format = "[$user]($style) "
 disabled = false
