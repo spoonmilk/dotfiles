@@ -1,0 +1,60 @@
+[colors]
+foreground = "#f8efd8"
+background = "#053230"
+cursor_fg = "#053230"
+cursor_bg = "#f8efd8"
+cursor_border = "#f8efd8"
+selection_fg = "#f8efd8"
+selection_bg = "#969c46"
+scrollbar_thumb = "#2d555a"
+split = "#f8efd8"
+
+ansi = [
+    "#000000",
+    "#800000",
+    "#008000",
+    "#808000",
+    "#000080",
+    "#800080",
+    "#008080",
+    "#c0c0c0",
+]
+
+brights = [
+    "#808080",
+    "#d33934",
+    "#51a163",
+    "#969c46",
+    "#3b80a1",
+    "#ff00ff",
+    "#00ffff",
+    "#ffffff",
+]
+
+[colors.tab_bar]
+background = "#2d555a"
+
+[colors.tab_bar.active_tab]
+bg_color = "#063a38"
+fg_color = "#f8efd8"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#2d555a"
+fg_color = "#f8efd8"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#3b80a1"
+fg_color = "#f8efd8"
+
+[colors.tab_bar.new_tab]
+bg_color = "#2d555a"
+fg_color = "#f8efd8"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#3b80a1"
+fg_color = "#f8efd8"
+
+[metadata]
+name = "menguless"
+author = "Zekeriya Koc"
+origin_url = "https://github.com/zekzekus/dotfiles"
