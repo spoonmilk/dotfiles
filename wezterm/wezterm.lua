@@ -38,9 +38,9 @@ config.color_scheme_dirs = { "./colors/" }
 -- Themes for switching
 local themes = {
 	dark = {
-		color_scheme = "Melange Dark",
-		window_background_opacity = 0.99,
-		text_background_opacity = 0.99,
+		color_scheme = "Photon",
+		window_background_opacity = 1.00,
+		text_background_opacity = 1.00,
 	},
 	light = {
 		color_scheme = "Paper (Gogh)",

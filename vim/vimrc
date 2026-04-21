@@ -6,7 +6,7 @@ set noswapfile
 syntax on
 set termguicolors
 set background=dark
-colorscheme menguless
+colorscheme photon
 set number
 set ft=txtfmt
 filetype on

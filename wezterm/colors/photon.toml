@@ -1,8 +1,9 @@
 [colors]
-background ='#262626'
 foreground= '#c6c6c6'
-cursor_fg = '#262626'
+background ='#262626'
 cursor_bg = '#c6c6c6'
+cursor_fg = '#262626'
+
 ansi = [ 
      '#262626',
     '#ac2c2c',
@@ -12,8 +13,9 @@ ansi = [
     '#75507b',
     '#389aad',
     '#626262',
-],
-  brights = [
+]
+
+brights = [
      '#767676',
     '#af5f87',
     '#87af87',
@@ -23,6 +25,7 @@ ansi = [
     '#34e2e2',
     '#c6c6c6'
 ]
+
 [metadata]
 aliases = []
 name = "Photon"

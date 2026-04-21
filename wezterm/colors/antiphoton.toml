@@ -1,0 +1,32 @@
+[colors]
+foreground = '#121212'
+background = '#ffffff'
+cursor_bg = '#ffffff'
+cursor_fg = '#121212'
+
+ansi = [
+  '#121212',
+  '#af0000',
+  '#008700',
+  '#a2734c',
+  '#12488b',
+  '#a347ba',
+  '#2aa1b3',
+  '#949494',
+]
+
+brights = [
+  '#6c6c6c',
+  '#d75f5f',
+  '#33d17a',
+  '#d75f00',
+  '#2a7bde',
+  '#af5fd7',
+  '#33c7de',
+  '#ffffff',
+]
+
+
+[metadata]
+aliases = []
+name = "Antiphoton"
