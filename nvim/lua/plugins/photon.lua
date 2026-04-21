@@ -1,5 +1,5 @@
 return {
-  'p00f/alabaster.nvim',
+  'axvr/photon.vim',
   lazy = false,
   priority = 1000,
 }

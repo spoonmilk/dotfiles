@@ -38,14 +38,14 @@ config.color_scheme_dirs = { "./colors/" }
 -- Themes for switching
 local themes = {
 	dark = {
-		color_scheme = "menguless",
+		color_scheme = "Melange Dark",
 		window_background_opacity = 0.99,
 		text_background_opacity = 0.99,
 	},
 	light = {
-		color_scheme = "Melange Light",
-		window_background_opacity = 0.9,
-		text_background_opacity = 0.9,
+		color_scheme = "Paper (Gogh)",
+		window_background_opacity = 0.99,
+		text_background_opacity = 0.99,
 	},
 }
 
@@ -54,6 +54,8 @@ local current_theme = "dark"
 for k, v in pairs(themes[current_theme]) do
 	config[k] = v
 end
+
+-- config.color_scheme = "Paper (Gogh)"
 
 config.hide_tab_bar_if_only_one_tab = false
 config.force_reverse_video_cursor = true

@@ -1,5 +1,5 @@
 return {
-  'p00f/alabaster.nvim',
+  'yorickpeterse/vim-paper',
   lazy = false,
   priority = 1000,
 }

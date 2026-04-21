@@ -28,6 +28,17 @@ return {
         before = [[vim.opt.background = "light"]],
       },
       {
+        name = 'Photon',
+        colorscheme = 'photon',
+        before = [[vim.opt.background = "dark"]],
+      },
+      {
+        name = 'Antiphoton',
+        colorscheme = 'antiphoton',
+        before = [[vim.opt.background = "light"]],
+      },
+
+      {
         name = 'Alabaster Dark',
         colorscheme = 'alabaster',
         before = [[vim.opt.background = "dark"]],
@@ -35,6 +46,26 @@ return {
       {
         name = 'Alabaster Light',
         colorscheme = 'alabaster',
+        before = [[vim.opt.background = "light"]],
+      },
+      {
+        name = 'Kanagawa Paper',
+        colorscheme = 'kanagawa-paper',
+        before = [[vim.opt.background = "dark"]],
+      },
+      {
+        name = 'Kanagawa Paper Ink',
+        colorscheme = 'kanagawa-paper-ink',
+        before = [[vim.opt.background = "dark"]],
+      },
+      {
+        name = 'Kanagawa Paper Canvas',
+        colorscheme = 'kanagawa-paper-canvas',
+        before = [[vim.opt.background = "light"]],
+      },
+      {
+        name = 'Paper',
+        colorscheme = 'paper',
         before = [[vim.opt.background = "light"]],
       },
       { name = 'blue', colorscheme = 'blue', before = [[vim.opt.background = "dark"]] },

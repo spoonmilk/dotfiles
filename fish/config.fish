@@ -31,6 +31,7 @@ alias nvim-old 'env NVIM_APPNAME="nvim-old" nvim'
 alias hws 'hws.sh'
 alias ls 'eza'
 alias Sioyek 'si'
+alias gram 'flatpak run app.liten.Gram'
 
 # Yazi integration to cd on quit
 function y
