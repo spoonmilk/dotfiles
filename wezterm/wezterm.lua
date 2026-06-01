@@ -27,7 +27,7 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- Font
 config.font = wezterm.font_with_fallback({
-	"JuliaMono Nerd Font",
+	"CommitMono Nerd Font",
 })
 config.font_size = 15
 
@@ -38,7 +38,7 @@ config.color_scheme_dirs = { "./colors/" }
 -- Themes for switching
 local themes = {
 	dark = {
-		color_scheme = "Photon",
+		color_scheme = "Melange Dark",
 		window_background_opacity = 1.00,
 		text_background_opacity = 1.00,
 	},

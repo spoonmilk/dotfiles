@@ -1,4 +1,5 @@
 allow_remote_control yes
+shell fish
 
 # END_KITTY_THEME
 # CURSOR TRAIL
@@ -10,7 +11,7 @@ repaint_delay 5
 input_delay 2
 
 # WINDOW SETTINGS
-hide_window_decorations yes
+hide_window_decorations no
 initial_window_width 100
 initial_window_height 40
 window_padding_width 10
@@ -26,21 +27,21 @@ scrollbar_hide_when_mouse_idle yes
 # background_image_layout cscaled
 # background_tint 0.9
 # dim_opacity 0.4
-background_opacity 0.95
+background_opacity 0.90
 background_blur 2
 
 # CONFIRM WINDOW CLOSE
 confirm_os_window_close 0
 
 # BEGIN_KITTY_FONTS
-font_family      family="JuliaMono Nerd Font"
-font_size 15
+font_family      family="CommitMono Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
+font_size 13.0
 
 # BEGIN_KITTY_THEME
-# Kaolin Breeze
+# Sourcerer
 include current-theme.conf
 # END_KITTY_THEME

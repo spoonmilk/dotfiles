@@ -28,6 +28,9 @@ keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic me
 -- Exit terminal mode
 keymap('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+-- -- Change-paste bind
+-- keymap('n', '<leader>cp', '_cw<C-R><Esc>', { desc = '[C]hange [P]aste' })
+
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })

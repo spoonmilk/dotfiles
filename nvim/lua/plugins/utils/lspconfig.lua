@@ -218,21 +218,18 @@ return {
             },
           },
         },
-        -- ARM Assembly Language Server
+        marksman = {},
         asm_lsp = {
           filetypes = { 'asm', 'vmasm', 's', 'S' },
           settings = {
             ['asm-lsp'] = {
-              -- Configure for ARM assembly
               assemblers = {
                 gas = {
                   executable = 'as',
                   args = { '--64' },
                 },
               },
-              -- Enable ARM-specific features
               instruction_sets = { 'x86', 'x86_64', 'arm', 'aarch64', 'riscv' },
-              -- Configure completion and diagnostics
               completion = {
                 enable = true,
                 trigger_characters = { '.', ':' },

@@ -18,6 +18,26 @@ return {
         before = [[vim.opt.background = "light"]],
       },
       {
+        name = 'Vague',
+        colorscheme = 'vague',
+        before = [[vim.opt.background = "dark"]],
+      },
+      {
+        name = 'Earl Grey',
+        colorscheme = 'vim-earl-grey',
+        before = [[vim.opt.background = "light"]],
+      },
+      {
+        name = 'Oxocarbon Dark',
+        colorscheme = 'oxocarbon',
+        before = [[vim.opt.background = "dark"]],
+      },
+      {
+        name = 'Oxocarbon Light',
+        colorscheme = 'oxocarbon',
+        before = [[vim.opt.background = "light"]],
+      },
+      {
         name = 'Menguless Dark',
         colorscheme = 'menguless',
         before = [[vim.opt.background = "dark"]],
